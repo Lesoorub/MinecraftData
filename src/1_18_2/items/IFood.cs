@@ -4,5 +4,4 @@
     {
         food_properties food_properties { get; }
     }
-
 }

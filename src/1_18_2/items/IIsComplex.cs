@@ -4,5 +4,4 @@
     {
         bool is_complex { get; } //true only for maps
     }
-
 }

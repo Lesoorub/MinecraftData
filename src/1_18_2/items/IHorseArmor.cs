@@ -5,5 +5,4 @@
         byte horse_protection { get; } //[3, 5, 7, 11]. 3 - leather, ..., 11 - diamond
         string horse_texture { get; }
     }
-
 }

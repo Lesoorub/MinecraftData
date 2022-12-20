@@ -10,5 +10,4 @@
         string translation_key { get; }
         ItemClasses @class { get; }
     }
-
 }

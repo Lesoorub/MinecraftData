@@ -4,5 +4,4 @@
     {
         string dye_color { get; }
     }
-
 }

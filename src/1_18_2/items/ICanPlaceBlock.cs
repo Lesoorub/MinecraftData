@@ -4,5 +4,4 @@
     {
         BlockNameID block { get; }
     }
-
 }

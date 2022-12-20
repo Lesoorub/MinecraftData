@@ -9,5 +9,4 @@
         byte enchantment_value { get; } //Only tools and swords. Enchant power. min 0, max 22
         float attack_damage { get; } //Only tools and swords
     }
-
 }

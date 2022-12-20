@@ -5,5 +5,4 @@
         byte analog_output { get; } //[0, 1, ... , 13]
         short sound { get; }
     }
-
 }

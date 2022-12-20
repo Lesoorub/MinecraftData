@@ -6,5 +6,4 @@
         int spawn_egg_color_2 { get; }
         byte spawn_egg_entity_type { get; }
     }
-
 }

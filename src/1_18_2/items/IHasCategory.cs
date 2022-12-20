@@ -4,5 +4,4 @@
     {
         byte category { get; }
     }
-
 }

@@ -5,5 +5,4 @@ namespace MinecraftData._1_18_2.items.minecraft
     {
         Dictionary<short, short> strippables_blocks { get; }
     }
-
 }

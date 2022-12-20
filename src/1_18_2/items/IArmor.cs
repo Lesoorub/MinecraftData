@@ -8,5 +8,4 @@
         armor_material armor_material { get; }
         float knockback_resistance { get; }
     }
-
 }
