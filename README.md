@@ -6,6 +6,11 @@ All data for the project was taken from [pixlyzer-data](https://gitlab.com/Bixil
 
 To simplify access to the elements, partial partitioning into subdirectories was used. Instead of the `_` sign, the creation of a subdirectory was used.
 
+## Preformance
+
+1. Zero initialization time.
+2. Each access to the property costs a certain amount of time.
+
 # Dependencies Hell
 Diagram getted by [Dependencies Viewer](https://github.com/Lesoorub/DependenciesViewer).
 Full graph your can view [here](./images/all_dependencies.svg)
@@ -14,24 +19,6 @@ Full graph your can view [here](./images/all_dependencies.svg)
 # Blocks
 
 Each block inherits from a common interface - IBlockData.
-
-## Block interface
-
-```cs
-public interface IBlockData
-{
-    short DefaultStateID { get; }
-    state DefaultState { get; }
-    float Hardness { get; }
-    float ExplosionResistance { get; }
-    bool IsTransparent { get; }
-    MinecraftMaterial Material { get; }
-    byte SoundGroup { get; }
-    short DroppedItem { get; }
-    Dictionary<string, List<string>> Properties { get; }
-    state[] States { get; }
-}
-```
 
 ## Example block
 
@@ -64,6 +51,25 @@ public class diamond_block : IBlockData
     };
 }
 ```
+
+## Block interface
+
+```cs
+public interface IBlockData
+{
+    short DefaultStateID { get; }
+    state DefaultState { get; }
+    float Hardness { get; }
+    float ExplosionResistance { get; }
+    bool IsTransparent { get; }
+    MinecraftMaterial Material { get; }
+    byte SoundGroup { get; }
+    short DroppedItem { get; }
+    Dictionary<string, List<string>> Properties { get; }
+    state[] States { get; }
+}
+```
+
 # Items
  Each item is described by several interfaces:
  - IArmor
@@ -80,6 +86,31 @@ public class diamond_block : IBlockData
  - IMusicDisk
  - ISpawnEgg
  - ITool
+
+You can access for items throghout dictionary:
+```cs
+public partial class ItemAttribute : Attribute {
+    public static readonly Dictionary<ItemNameID, IBaseItem> items
+}
+```
+
+## Example item
+
+```cs
+[Item(ItemNameID.diamond_block)]
+public class diamond_block : IBaseItem, IHasCategory,ICanPlaceBlock
+{
+    public short id => 68;
+    public Rarity rarity => Rarity.common;
+    public byte max_stack_size => 64;
+    public short max_damage => 0;
+    public bool is_fire_resistant => false;
+    public string translation_key => "block.minecraft.diamond_block";
+    public ItemClasses @class => ItemClasses.BlockItem;
+    public byte category => 0;
+    public BlockNameID block => BlockNameID.diamond_block;
+}
+```
 
 ## Item interfaces
 
