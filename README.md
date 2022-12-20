@@ -8,7 +8,8 @@ To simplify access to the elements, partial partitioning into subdirectories was
 
 # Dependencies Hell
 Diagram getted by [Dependencies Viewer](https://github.com/Lesoorub/DependenciesViewer).
-[](./images/part_of_all_dependencies.png)
+Full graph your can view [here](./images/all_dependencies.svg)
+![](./images/part_of_all_dependencies.png)
 
 # Blocks
 
