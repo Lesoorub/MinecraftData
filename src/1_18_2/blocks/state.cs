@@ -5,6 +5,7 @@
         public short Id;
         public byte[] Properties;
         public short? CollisionShape;
+        public byte Luminance;
         public short LightCost;
         public bool HasSideTransparency;
     }

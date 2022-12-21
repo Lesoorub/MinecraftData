@@ -31,9 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -969,9 +966,6 @@
     <Compile Include="1_18_2\items\Rarity.cs" />
     <Compile Include="1_18_2\items\RarityColorAttribute.cs" />
     <Compile Include="1_18_2\items\armor_material.cs" />
-    <Compile Include="1_18_2\CodeGenerators\BlocksGenerator.cs" />
-    <Compile Include="1_18_2\CodeGenerators\ItemsGenerator.cs" />
-    <Compile Include="1_18_2\CodeGenerators\Tools.cs" />
     <Compile Include="1_18_2\items\equipment_slot.cs" />
     <Compile Include="1_18_2\items\ItemClasses.cs" />
     <Compile Include="1_18_2\items\ItemNameID.cs" />
@@ -2077,9 +2071,6 @@
     <Compile Include="1_18_2\items\minecraft\zombie\villager\spawn\egg.cs" />
     <Compile Include="1_18_2\items\minecraft\zombified\piglin\spawn\egg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

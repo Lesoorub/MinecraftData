@@ -23,6 +23,7 @@ namespace MinecraftData._1_18_2.blocks.minecraft
                 Id = 1491,
                 Properties = new byte[] {  },
                 CollisionShape = null,
+                Luminance = 14,
                 LightCost = 0,
                 HasSideTransparency = false,
             }
