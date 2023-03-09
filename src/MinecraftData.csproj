@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="1_18_2\blocks\BlockAttribute.cs" />
     <Compile Include="1_18_2\blocks\BlockAttributeBacked.cs" />
+    <Compile Include="1_18_2\blocks\BlockBackend2.cs" />
     <Compile Include="1_18_2\blocks\BlockNameID.cs" />
     <Compile Include="1_18_2\blocks\DefaultBlockState.cs" />
     <Compile Include="1_18_2\blocks\MinecraftMaterial.cs" />
@@ -2070,6 +2071,8 @@
     <Compile Include="1_18_2\items\minecraft\zombie\spawn\egg.cs" />
     <Compile Include="1_18_2\items\minecraft\zombie\villager\spawn\egg.cs" />
     <Compile Include="1_18_2\items\minecraft\zombified\piglin\spawn\egg.cs" />
+    <Compile Include="1_18_2\shapes\AABB.cs" />
+    <Compile Include="1_18_2\shapes\ShapesBacked.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

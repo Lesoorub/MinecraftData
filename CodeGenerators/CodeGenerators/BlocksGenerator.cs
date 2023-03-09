@@ -11,6 +11,19 @@ namespace MinecraftData._1_18_2.CodeGenerators
 {
     public static class BlocksGenerator
     {
+        public static void GenerateBackendArray(string jsonInPath)
+        {
+            var bd = Tools.ReadBigJson<BlockData>(jsonInPath);
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine($"public static IBlockData[] block2 = new IBlockData[] {{");
+            foreach (var pair in bd)
+            {
+                var name = pair.Key.Replace("minecraft:", "");
+                sb.AppendLine($"new {name}(),");
+            }
+            sb.AppendLine($"}};");
+            var result = sb.ToString();
+        }
         private static void WriteJson(string path, object value)
         {
             var settings = new JsonSerializerSettings()

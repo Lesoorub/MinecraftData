@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MinecraftData._1_18_2.blocks.minecraft
 {
-	public partial class BlockAttribute : Attribute
+    public partial class BlockAttribute : Attribute
     {
         public static readonly Dictionary<BlockNameID, IBlockData> blocks = new Dictionary<BlockNameID, IBlockData>()
         {
